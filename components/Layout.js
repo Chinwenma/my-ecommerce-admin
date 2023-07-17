@@ -2,7 +2,7 @@ import { useSession, signIn, signOut } from "next-auth/react";
 import Nav from "@/components/Nav";
 
 
-export default function Home() {
+export default function Layout({children}) {
   const { data: session } = useSession();
 
   if (!session) {
@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <div className= "flex bg-slate-900 min-h-screen">
        <Nav/>
-      <div className="bg-gray-200 flex-grow mt-2 mr2 rounded-md p-4 mb-2">logged in as {session.user.email}</div>
+      <div className="bg-gray-200 flex-grow mt-2 mr2 rounded-md p-4 mb-2">{children}</div>
      
     </div>
   );
