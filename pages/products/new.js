@@ -10,8 +10,8 @@ export default function NewProduct() {
  async function createProduct(ev) {
     ev.preventDefault();
     const data = {title, description, price}
-  await  axios.post('/api.products', data)
-  }
+    await axios.post('/api/products', data)
+    }
   return (
     <Layout>
       <form onSubmit={createProduct}>
@@ -36,7 +36,8 @@ export default function NewProduct() {
           value={price}
           onChange={(ev) => setPrice(ev.target.value)}
         />
-        <button type="submit" className="btn-primary">
+        
+        <button type="submit" className="btn-primary" >
           Save
         </button>
       </form>
