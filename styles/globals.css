@@ -35,6 +35,9 @@ table.basic thead tr td{
 table.basic tr td{
   @apply border border-slate-600 p-1;
 }
+table.basic a{
+  @apply px-4 rounded-sm inline-flex mx-1 bg-slate-900 items-center gap-1 text-sm py-1 text-white;
+}
 /* 
 
 table.basic{
