@@ -5,10 +5,8 @@ const {method} = req;
 await mongooseConnect();
 
 
-if (method === 'GET') {
-    res.json(await Product.find());
-  // } else {
-  // }
+if (method === 'GET'){
+  res.json(await Product.find());
 }
 
 

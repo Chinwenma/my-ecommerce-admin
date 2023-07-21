@@ -1,7 +1,6 @@
 // import ProductForm from "@/components/ProductForm";
 import Layout from "@/components/Layout";
 import axios from "axios";
-import { redirect } from "next/dist/server/api-utils";
 import { useRouter } from "next/router";
 import { useState } from "react";
 
