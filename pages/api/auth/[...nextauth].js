@@ -25,7 +25,7 @@ export default NextAuth({
   adapter:MongoDBAdapter(clientPromise),
   secret:"test",
   pages:{
-   signIn:"/" 
+   signIn:"" 
   },
 
   jwt:{
