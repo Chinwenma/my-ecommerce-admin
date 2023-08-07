@@ -8,6 +8,7 @@ export default  function ProductForm({
   title:existingTitle,
     description:existingDescription,
     price:existingPrice,
+    images,
 }) {
     const [title, setTitle] = useState(existingTitle || "");
     const [description, setDescription] = useState(existingDescription ||"");
@@ -44,6 +45,14 @@ export default  function ProductForm({
             value={title}
             onChange={(ev) => setTitle(ev.target.value)}
           />
+          <label>
+photos
+          </label>
+          <div className="mb-2 flex flex-wrap gap-1">
+{!images?.length && (
+  <div>NO PHOTOS FOR HERE</div>
+)}
+          </div>
           <label> Description</label>
           <textarea
             placeholder="description"
